@@ -12,7 +12,7 @@ app.post("/authenticate", async (req, res) => {
   // Store a user-copy on Chat Engine!
   // Docs at rest.chatengine.io
   try {
-    const r = await axios.post(
+    const r = await axios.put(
       "https://api.chatengine.io/users/",
       { username: username, secret: username, first_name: username},
       { headers: { "Private-Key": "d43db2b5-3036-41ca-ba0d-9649d311c3de" } }
